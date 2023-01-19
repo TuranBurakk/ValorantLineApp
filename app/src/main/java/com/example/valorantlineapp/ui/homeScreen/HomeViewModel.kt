@@ -1,10 +1,11 @@
-package com.example.valorantlineapp.ui
+package com.example.valorantlineapp.ui.homeScreen
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.valorantlineapp.data.entity.AgentData
+import com.example.valorantlineapp.ui.homeScreen.AgentUseCase
 import com.example.valorantlineapp.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn

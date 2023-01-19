@@ -1,4 +1,4 @@
-package com.example.valorantlineapp.ui
+package com.example.valorantlineapp.ui.homeScreen
 
 import com.example.valorantlineapp.data.entity.AgentData
 import com.example.valorantlineapp.data.remote.Repository
