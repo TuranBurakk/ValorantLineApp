@@ -7,7 +7,30 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.valorantlineapp.ui.HomeFragment"
+        android:name="com.example.valorantlineapp.ui.homeScreen.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_tabControllerFragment"
+            app:destination="@id/tabControllerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.valorantlineapp.ui.detailScreen.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/tabControllerFragment"
+        android:name="com.example.valorantlineapp.ui.tabControllerScreen.TabControllerFragment"
+        android:label="fragment_tab_controller"
+        tools:layout="@layout/fragment_tab_controller" >
+        <argument
+            android:name="agent"
+            app:argType="com.example.valorantlineapp.data.entity.Agent" />
+        <action
+            android:id="@+id/action_tabControllerFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
 </navigation>

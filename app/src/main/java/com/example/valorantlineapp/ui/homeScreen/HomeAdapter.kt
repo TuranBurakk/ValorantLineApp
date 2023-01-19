@@ -1,7 +1,8 @@
-package com.example.valorantlineapp.ui
+package com.example.valorantlineapp.ui.homeScreen
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.valorantlineapp.data.entity.Agent
 import com.example.valorantlineapp.databinding.AgentRowBinding
@@ -23,6 +24,9 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.AgentHolder>() {
             list[position].icon
         )
         holder.binding.agentNameTV.text = list[position].name
+        holder.binding.imageView.setOnClickListener {
+            it.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToTabControllerFragment(list[position]))
+        }
     }
 
     override fun getItemCount(): Int = list.size

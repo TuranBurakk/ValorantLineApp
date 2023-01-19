@@ -1,4 +1,4 @@
-package com.example.valorantlineapp.ui
+package com.example.valorantlineapp.ui.homeScreen
 
 import android.os.Bundle
 import android.view.View
