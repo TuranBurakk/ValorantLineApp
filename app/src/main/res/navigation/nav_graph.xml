@@ -32,5 +32,21 @@
         <action
             android:id="@+id/action_tabControllerFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_tabControllerFragment_to_abilityFragment"
+            app:destination="@id/abilityFragment" />
+        <action
+            android:id="@+id/action_tabControllerFragment_to_lineUpFragment"
+            app:destination="@id/lineUpFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/abilityFragment"
+        android:name="com.example.valorantlineapp.ui.abilityScreen.AbilityFragment"
+        android:label="fragment_ability"
+        tools:layout="@layout/fragment_ability" />
+    <fragment
+        android:id="@+id/lineUpFragment"
+        android:name="com.example.valorantlineapp.ui.LineUpFragment"
+        android:label="fragment_line_up"
+        tools:layout="@layout/fragment_line_up" />
 </navigation>
