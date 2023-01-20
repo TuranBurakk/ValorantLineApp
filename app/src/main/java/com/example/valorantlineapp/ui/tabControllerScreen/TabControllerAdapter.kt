@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.valorantlineapp.data.entity.Agent
-import com.example.valorantlineapp.ui.AbilityFragment
+import com.example.valorantlineapp.ui.abilityScreen.AbilityFragment
 import com.example.valorantlineapp.ui.LineUpFragment
 import com.example.valorantlineapp.ui.detailScreen.DetailFragment
 
@@ -18,7 +18,7 @@ class TabControllerAdapter (fragmentManager: FragmentManager, lifecycle: Lifecyc
     override fun createFragment(position: Int): Fragment {
         return  when(position){
             0 -> DetailFragment(currentArgId)
-            1 -> AbilityFragment()
+            1 -> AbilityFragment(currentArgId)
             3-> LineUpFragment()
             else -> Fragment()
         }
