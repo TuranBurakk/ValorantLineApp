@@ -19,7 +19,7 @@ class TabControllerAdapter (fragmentManager: FragmentManager, lifecycle: Lifecyc
         return  when(position){
             0 -> DetailFragment(currentArgId)
             1 -> AbilityFragment(currentArgId)
-            3-> LineUpFragment()
+            3-> LineUpFragment(currentArgId)
             else -> Fragment()
         }
     }
