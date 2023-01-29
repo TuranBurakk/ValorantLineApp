@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">ValorantLineApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="api_key">AIzaSyDCDrR0XkydTZUBMyX8_c8bMGv7peXe2Gc</string>
 </resources>
