@@ -1,5 +1,6 @@
 package com.example.valorantlineapp.ui.tabControllerScreen
 
+import android.app.Activity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
@@ -19,7 +20,7 @@ class TabControllerAdapter (fragmentManager: FragmentManager, lifecycle: Lifecyc
         return  when(position){
             0 -> DetailFragment(currentArgId)
             1 -> AbilityFragment(currentArgId)
-            3-> LineUpFragment(currentArgId)
+            2-> LineUpFragment(currentArgId)
             else -> Fragment()
         }
     }
