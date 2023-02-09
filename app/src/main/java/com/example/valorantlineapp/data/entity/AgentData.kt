@@ -11,6 +11,7 @@ data class AgentData(
 
 @Parcelize
 data class Agent(
+    @SerializedName("uuid")val uuid : String? ,
     @SerializedName("displayName")val name : String? ,
     @SerializedName("description")val desc : String?,
     @SerializedName("displayIconSmall")val icon : String? ,

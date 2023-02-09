@@ -9,10 +9,11 @@ import com.example.valorantlineapp.databinding.AgentRowBinding
 import com.example.valorantlineapp.utils.downloadFromUrl
 
 class HomeAdapter : RecyclerView.Adapter<HomeAdapter.AgentHolder>() {
-        private var list = listOf<Agent>()
+        private var list = mutableListOf<Agent>()
     class AgentHolder(val binding : AgentRowBinding) : RecyclerView.ViewHolder(binding.root) {
 
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AgentHolder {
         val view = LayoutInflater.from(parent.context)
@@ -20,6 +21,11 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.AgentHolder>() {
     }
 
     override fun onBindViewHolder(holder: AgentHolder, position: Int) {
+       if (list[position].uuid == "ded3520f-4264-bfed-162d-b080e2abccf9" ){
+           val target = list[position]
+            list.remove(target)
+       }
+
         holder.binding.imageView.downloadFromUrl(
             list[position].icon
         )
@@ -31,7 +37,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.AgentHolder>() {
 
     override fun getItemCount(): Int = list.size
 
-    fun setData(newList : List<Agent>){
+    fun setData(newList: MutableList<Agent>){
         if (newList != null){
             list = newList
         }

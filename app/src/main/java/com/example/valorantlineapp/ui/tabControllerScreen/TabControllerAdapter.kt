@@ -1,13 +1,12 @@
 package com.example.valorantlineapp.ui.tabControllerScreen
 
-import android.app.Activity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.valorantlineapp.data.entity.Agent
 import com.example.valorantlineapp.ui.abilityScreen.AbilityFragment
-import com.example.valorantlineapp.ui.LineUpFragment
+import com.example.valorantlineapp.ui.lineUpScreen.LineUpFragment
 import com.example.valorantlineapp.ui.detailScreen.DetailFragment
 
 class TabControllerAdapter (fragmentManager: FragmentManager, lifecycle: Lifecycle

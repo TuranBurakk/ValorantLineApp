@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "638278788033",
+    "project_id": "valorantlineapp",
+    "storage_bucket": "valorantlineapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638278788033:android:8861ee27a56b898c57c540",
+        "android_client_info": {
+          "package_name": "com.example.valorantlineapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638278788033-m4kpqkelg8r60kalq0s7ma3g5lkc7lj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCDrR0XkydTZUBMyX8_c8bMGv7peXe2Gc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638278788033-m4kpqkelg8r60kalq0s7ma3g5lkc7lj7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

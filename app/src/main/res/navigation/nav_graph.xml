@@ -38,6 +38,9 @@
         <action
             android:id="@+id/action_tabControllerFragment_to_lineUpFragment"
             app:destination="@id/lineUpFragment" />
+        <action
+            android:id="@+id/action_tabControllerFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
     </fragment>
     <fragment
         android:id="@+id/abilityFragment"
@@ -46,7 +49,23 @@
         tools:layout="@layout/fragment_ability" />
     <fragment
         android:id="@+id/lineUpFragment"
-        android:name="com.example.valorantlineapp.ui.LineUpFragment"
+        android:name="com.example.valorantlineapp.ui.lineUpScreen.LineUpFragment"
         android:label="fragment_line_up"
         tools:layout="@layout/fragment_line_up" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.valorantlineapp.ui.youtubeScreen.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video">
+        <argument
+            android:name="agentname"
+            app:argType="string" />
+        <argument
+            android:name="map"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_videoFragment_to_tabControllerFragment"
+            app:destination="@id/tabControllerFragment" />
+
+    </fragment>
 </navigation>
