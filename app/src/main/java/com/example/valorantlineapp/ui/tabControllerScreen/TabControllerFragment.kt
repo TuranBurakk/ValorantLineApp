@@ -1,13 +1,9 @@
 package com.example.valorantlineapp.ui.tabControllerScreen
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.valorantlineapp.R
 import com.example.valorantlineapp.base.BaseFragment
 import com.example.valorantlineapp.databinding.FragmentTabControllerBinding
 import com.google.android.material.tabs.TabLayoutMediator
@@ -37,7 +33,7 @@ class TabControllerFragment : BaseFragment<FragmentTabControllerBinding>(Fragmen
 
     private fun initBack(){
         binding.btnBack.setOnClickListener {
-            findNavController().popBackStack()
+           findNavController().navigate(TabControllerFragmentDirections.actionTabControllerFragmentToHomeFragment())
         }
     }
 }

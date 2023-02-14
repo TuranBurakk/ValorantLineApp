@@ -1,18 +1,13 @@
 package com.example.valorantlineapp.ui.lineUpScreen
 
 import android.os.Bundle
-import android.view.MotionEvent
 import android.view.View
 import androidx.fragment.app.viewModels
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener
 import com.example.valorantlineapp.base.BaseFragment
 import com.example.valorantlineapp.data.entity.Agent
 import com.example.valorantlineapp.databinding.FragmentLineUpBinding
-import com.example.valorantlineapp.ui.tabControllerScreen.TabControllerFragmentArgs
 import com.example.valorantlineapp.ui.tabControllerScreen.TabControllerFragmentDirections
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -41,7 +36,7 @@ class LineUpFragment(private val agent: Agent) :
 
     override fun selectMap(item: String, position: Int) {
             findNavController().
-            navigate(TabControllerFragmentDirections.actionTabControllerFragmentToVideoFragment(agent.uuid!!,item))
+            navigate(TabControllerFragmentDirections.actionTabControllerFragmentToVideoFragment(agent,item))
     }
 
 }

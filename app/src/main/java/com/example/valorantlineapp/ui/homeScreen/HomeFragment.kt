@@ -5,7 +5,6 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.valorantlineapp.base.BaseFragment
-import com.example.valorantlineapp.data.entity.Agent
 import com.example.valorantlineapp.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -15,7 +14,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
 
     private val adapter by lazy { HomeAdapter() }
     private val viewModel: HomeViewModel by viewModels()
-    private val heroList : ArrayList<Agent> = arrayListOf()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -25,14 +23,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         viewModel.agent.observe(viewLifecycleOwner) {
             it?.data.let { agent ->
                 if (agent != null) {
-
                     adapter.setData(agent.toMutableList())
                 }
             }
-
         }
-
-
     }
-
 }
