@@ -7,8 +7,10 @@ import javax.inject.Inject
 class RemoteDataSource @Inject constructor(
     private val apiService: ApiService
 ){
-    suspend fun getAgent(): AgentData{
-       return apiService.getAgent()
+    suspend fun getAgent(
+        language: String, isPlayableCharacter: Boolean
+    ): AgentData{
+       return apiService.getAgent(language, isPlayableCharacter)
     }
 
     suspend fun getMaps(): MapData{

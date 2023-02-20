@@ -23,7 +23,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
         viewModel.agent.observe(viewLifecycleOwner) {
             it?.data.let { agent ->
                 if (agent != null) {
-                    adapter.setData(agent.toMutableList())
+                    adapter.setData(agent)
                 }
             }
         }

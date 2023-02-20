@@ -21,6 +21,7 @@ class TabControllerFragment : BaseFragment<FragmentTabControllerBinding>(Fragmen
         super.onViewCreated(view, savedInstanceState)
         initTabs()
         initBack()
+        binding.agentNmTV.text = args.agent.name
     }
 
     private fun initTabs(){

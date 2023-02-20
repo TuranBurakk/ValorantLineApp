@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.valorantlineapp.data.entity.AgentData
-import com.example.valorantlineapp.ui.homeScreen.AgentUseCase
 import com.example.valorantlineapp.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
@@ -23,7 +22,7 @@ class HomeViewModel @Inject  constructor(
         getAgents()
     }
 
-    fun getAgents(){
+    private fun getAgents(){
         agentUseCase().onEach { result ->
             when (result.status) {
                 Resource.Status.SUCCESS ->{

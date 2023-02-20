@@ -16,7 +16,7 @@ class AgentUseCase @Inject constructor(
         try {
 
             emit(Resource.loading())
-            val agent = repository.getAgent()
+            val agent = repository.getAgent("en-US",true)
             emit(Resource.success(agent))
         }catch (e: HttpException){
             emit(Resource.error(e.localizedMessage))

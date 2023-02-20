@@ -11,30 +11,16 @@
     tools:context=".ui.detailScreen.DetailFragment">
 
 
-    <TextView
-        android:id="@+id/agentNmTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="TextView"
-        android:textColor="@color/red"
-        android:fontFamily="@font/valorant_font"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/portraitIV"
         android:layout_width="0dp"
         android:layout_height="161dp"
         android:layout_marginStart="138dp"
-        android:layout_marginTop="80dp"
-        android:scaleType="centerCrop"
         android:layout_marginEnd="138dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agentNmTV"
+        tools:layout_editor_absoluteY="88dp"
         tools:src="@tools:sample/avatars" />
 
     <TextView

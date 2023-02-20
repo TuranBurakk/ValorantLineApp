@@ -7,8 +7,9 @@ import javax.inject.Inject
 class Repository @Inject constructor(
     private val remoteDataSource: RemoteDataSource
 ) {
-    suspend fun getAgent(): AgentData{
-       return remoteDataSource.getAgent()
+    suspend fun getAgent(language: String, isPlayableCharacter: Boolean
+    ): AgentData{
+       return remoteDataSource.getAgent(language, isPlayableCharacter)
     }
 
     suspend fun getMaps(): MapData {
