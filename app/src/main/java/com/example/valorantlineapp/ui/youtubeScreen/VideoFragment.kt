@@ -20,19 +20,25 @@ class VideoFragment : BaseFragment<FragmentVideoBinding>(FragmentVideoBinding::i
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
         lifecycle.addObserver(binding.youtubePlayer)
         binding.btnBack.setOnClickListener {
             findNavController().navigate(VideoFragmentDirections.actionVideoFragmentToTabControllerFragment(args.agentname))
 
         }
+
         binding.youtubePlayer.addYouTubePlayerListener(object : AbstractYouTubePlayerListener(){
             override fun onReady(youTubePlayer: YouTubePlayer) {
                 super.onReady(youTubePlayer)
-              db.collection(args.agentname.uuid!!).document(args.map).get().addOnSuccessListener {
-                  youTubePlayer.loadVideo( it.get("url").toString(),0f)
-              }
+                if (args.map == "The Range"){
+                    db.collection("1").document(args.map).get().addOnSuccessListener {
+                        youTubePlayer.loadVideo(it.get("url").toString(),0f)
+                    }
+                }
+                else{
+                    db.collection(args.agentname.uuid!!).document(args.map).get().addOnSuccessListener {
+                        youTubePlayer.loadVideo( it.get("url").toString(),0f)
+                    }
+                }
             }
         })
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
@@ -42,8 +48,6 @@ class VideoFragment : BaseFragment<FragmentVideoBinding>(FragmentVideoBinding::i
                      findNavController().navigate(VideoFragmentDirections.actionVideoFragmentToTabControllerFragment(args.agentname))
                  }
                 }
-
             })
     }
-
 }
