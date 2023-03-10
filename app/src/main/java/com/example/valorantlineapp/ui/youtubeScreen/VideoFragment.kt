@@ -36,8 +36,9 @@ class VideoFragment : BaseFragment<FragmentVideoBinding>(FragmentVideoBinding::i
                 }
                 else{
                     db.collection(args.agentname.uuid!!).document(args.map).get().addOnSuccessListener {
-                        youTubePlayer.loadVideo( it.get("url").toString(),0f)
-                    }
+                        val url = it.get("url").toString()
+                            youTubePlayer.loadVideo(url, 0f)
+                        }
                 }
             }
         })
