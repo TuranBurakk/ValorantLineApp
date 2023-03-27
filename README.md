@@ -9,7 +9,6 @@
 - Navigation Component
 - Safe-Args
 - Glide
-- Firebase
 - Click [here](https://play.google.com/store/apps/details?id=com.infos.valorantlineapp) for PlayStore
 
 ## Screen
