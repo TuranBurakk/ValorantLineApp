@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.valorantlineapp.ui.homeScreen.HomeFragment"
+        android:name="com.infos.valorantlineapp.ui.homeScreen.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,19 +16,19 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.valorantlineapp.ui.detailScreen.DetailFragment"
+        android:name="com.infos.valorantlineapp.ui.detailScreen.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
 
     </fragment>
     <fragment
         android:id="@+id/tabControllerFragment"
-        android:name="com.example.valorantlineapp.ui.tabControllerScreen.TabControllerFragment"
+        android:name="com.infos.valorantlineapp.ui.tabControllerScreen.TabControllerFragment"
         android:label="fragment_tab_controller"
         tools:layout="@layout/fragment_tab_controller" >
         <argument
             android:name="agent"
-            app:argType="com.example.valorantlineapp.data.entity.Agent" />
+            app:argType="com.infos.valorantlineapp.data.entity.Agent" />
         <action
             android:id="@+id/action_tabControllerFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
@@ -44,25 +44,28 @@
         <action
             android:id="@+id/action_tabControllerFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/abilityFragment"
-        android:name="com.example.valorantlineapp.ui.abilityScreen.AbilityFragment"
+        android:name="com.infos.valorantlineapp.ui.abilityScreen.AbilityFragment"
         android:label="fragment_ability"
         tools:layout="@layout/fragment_ability" />
     <fragment
         android:id="@+id/lineUpFragment"
-        android:name="com.example.valorantlineapp.ui.lineUpScreen.LineUpFragment"
+        android:name="com.infos.valorantlineapp.ui.lineUpScreen.LineUpFragment"
         android:label="fragment_line_up"
         tools:layout="@layout/fragment_line_up" />
     <fragment
         android:id="@+id/videoFragment"
-        android:name="com.example.valorantlineapp.ui.youtubeScreen.VideoFragment"
+        android:name="com.infos.valorantlineapp.ui.youtubeScreen.VideoFragment"
         android:label="fragment_video"
         tools:layout="@layout/fragment_video">
         <argument
             android:name="agentname"
-            app:argType="com.example.valorantlineapp.data.entity.Agent" />
+            app:argType="com.infos.valorantlineapp.data.entity.Agent" />
         <argument
             android:name="map"
             app:argType="string"/>
@@ -72,6 +75,9 @@
         <action
             android:id="@+id/action_videoFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_videoFragment_to_lineUpFragment"
+            app:destination="@id/lineUpFragment" />
 
     </fragment>
 </navigation>

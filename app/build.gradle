@@ -10,15 +10,15 @@ plugins {
 }
 
 android {
-    namespace 'com.example.valorantlineapp'
+    namespace 'com.infos.valorantlineapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.valorantlineapp"
+        applicationId "com.infos.valorantlineapp"
         minSdk 28
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 4
+        versionName "4.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
